@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Bluetooth RC Car Controller"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWheelAngle"
+        android:layout_alignBottom="@+id/tvWheelAngle"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="52dp"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Damian Tracz"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvWheelAngle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="35dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="90"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/btnOpen"
+        android:onClick="list"
+        android:text="Disconnect" />
+
+    <Button
+        android:id="@+id/btnOpen"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSpeed"
+        android:layout_alignLeft="@+id/btnClose"
+        android:text="Connect" />
+    
+        <android.widget.VerticalSeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_marginTop="60dp"
+        android:max="20"
+        android:progress="10" />
+
+</RelativeLayout>
